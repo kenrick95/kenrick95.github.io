@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenrick</title>
+
+    <script type="module">
+      (function () {
+        var check = document.createElement('script');
+        console.log('meow');
+        if (!('noModule' in check) && 'onbeforeload' in check) {
+          var support = false;
+          document.addEventListener(
+            'beforeload',
+            function (e) {
+              if (e.target === check) {
+                support = true;
+              } else if (!e.target.hasAttribute('nomodule') || !support) {
+                return;
+              }
+              e.preventDefault();
+            },
+            true
+          );
+
+          check.type = 'module';
+          check.src = '.';
+          document.head.appendChild(check);
+          check.remove();
+          console.log('woof');
+        }
+      })();
+    </script>
+    
+  </head>
+  <body>
+    <a href="https://github.com/kenrick95">github.com/kenrick95</a>
+
+    <script nomodule src="nomodule.js" defer></script>
+    <script type="module" src="module.js"></script>
+  </body>
+</html>
