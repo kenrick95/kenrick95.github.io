@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.kenrick95.nikku",
+      "sha256_cert_fingerprints":
+        ["52:12:F2:3B:68:25:A8:3A:53:08:EC:4B:AD:E9:24:7F:E9:2F:8A:53:65:0F:AA:18:F0:CD:CE:DF:C0:36:E7:BF"]
+    }
+  }
+]
